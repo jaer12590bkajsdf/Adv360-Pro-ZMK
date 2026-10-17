@@ -24,14 +24,14 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        default_layer_macOS {
             display-name = "Base";
             bindings = <
-&kp EQUAL  &kp N1     &kp N2            &kp N3     &kp N4     &kp N5  &tog 1                                                                                     &mo 3      &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
-&kp TAB    &kp Q      &kp W             &kp E      &kp R      &kp T   &none                                                                                      &none      &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
-&kp ESC    &lt 4 A    &kp S             &kp D      &kp F      &kp G   &kp LA(LG(LCTRL))  &kp LEFT_COMMAND  &kp LEFT_CONTROL      &kp LEFT_ALT  &kp LEFT_COMMAND  &none      &kp H   &kp J   &kp K      &lt 5 L   &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z      &kp X             &kp C      &kp V      &kp B                                        &kp HOME              &kp PG_UP                                  &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-&mo 2      &kp GRAVE  &kp LEFT_COMMAND  &kp LCTRL  &kp RIGHT          &kp BSPC           &kp DEL           &kp LC(C)             &kp PG_DN     &kp ENTER         &kp SPACE          &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 2
+&kp EQUAL  &kp N1     &kp N2            &kp N3     &kp N4  &kp N5  &none                                                                               &mo 3        &kp N6  &kp N7  &kp N8     &kp N9    &kp N0           &kp MINUS
+&kp TAB    &kp Q      &kp W             &kp E      &kp R   &kp T   &kp LG(C)                                                                           &kp LG(X)    &kp Y   &kp U   &kp I      &kp O     &kp P            &kp BSLH
+&kp ESC    &kp A      &kp S             &kp D      &kp F   &kp G   &kp LG(V)  &kp LG(F)  &kp LEFT_CONTROL      &kp LEFT_ALT          &kp LEFT_COMMAND  &kp LG(Z)    &kp H   &kp J   &kp K      &lt 5 L   &lt 6 SEMICOLON  &kp SQT
+&kp LSHFT  &kp Z      &kp X             &kp C      &kp V   &kp B                         &kp LC(C)             &none                                                &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH         &kp MINUS
+&mo 2      &kp GRAVE  &kp LEFT_COMMAND  &kp LCTRL  &none           &kp BSPC   &mo 1      &kp LC(DEL)           &kp LC(LA(LEFT_GUI))  &kp ENTER         &lt 4 SPACE          &none   &none      &kp LBKT  &kp RBKT         &kp LC(LG(Q))
             >;
         };
 
@@ -79,6 +79,16 @@
         };
 
         LAUNCHER {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        media_macOS {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
