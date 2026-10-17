@@ -29,7 +29,7 @@
             bindings = <
 &kp EQUAL  &kp N1     &kp N2            &kp N3     &kp N4  &kp N5  &none                                                                               &mo 3        &kp N6  &kp N7  &kp N8     &kp N9    &kp N0           &kp MINUS
 &kp TAB    &kp Q      &kp W             &kp E      &kp R   &kp T   &kp LG(C)                                                                           &kp LG(X)    &kp Y   &kp U   &kp I      &kp O     &kp P            &kp BSLH
-&kp ESC    &kp A      &kp S             &kp D      &kp F   &kp G   &kp LG(V)  &kp LG(F)  &kp LEFT_CONTROL      &kp LEFT_ALT          &kp LEFT_COMMAND  &kp LG(Z)    &kp H   &kp J   &kp K      &lt 5 L   &lt 6 SEMICOLON  &kp SQT
+&kp ESC    &kp A      &kp S             &kp D      &kp F   &kp G   &kp LG(V)  &kp LG(F)  &kp LEFT_CONTROL      &kp LEFT_ALT          &kp LEFT_COMMAND  &kp LG(Z)    &kp H   &kp J   &kp K      &lt 5 L   &lt 0 SEMICOLON  &kp SQT
 &kp LSHFT  &kp Z      &kp X             &kp C      &kp V   &kp B                         &kp LC(C)             &none                                                &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH         &kp MINUS
 &mo 2      &kp GRAVE  &kp LEFT_COMMAND  &kp LCTRL  &none           &kp BSPC   &mo 0      &kp LC(DEL)           &kp LC(LA(LEFT_GUI))  &kp ENTER         &lt 4 SPACE          &none   &none      &kp LBKT  &kp RBKT         &kp LC(LG(Q))
             >;
@@ -79,21 +79,11 @@
 
         LAUNCHER {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        media_macOS {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&none  &none                  &none                  &none                  &none                  &none                  &kp RS(RA(RC(RG(H))))                                  &none                  &none  &none  &none                  &none                  &none  &none
+&none  &none                  &none                  &none                  &none                  &kp RS(RA(RC(RG(T))))  &kp C_VOLUME_UP                                        &kp RS(RA(RC(RG(U))))  &none  &none  &none                  &kp RS(RA(RC(RG(O))))  &none  &none
+&none  &kp RS(RA(RC(RG(A))))  &kp RA(RC(RS(RG(S))))  &none                  &kp RS(RA(RC(RG(F))))  &kp RS(RG(RA(RC(G))))  &kp C_VOLUME_DOWN      &none  &none      &none  &none  &kp RS(RA(RC(RG(M))))  &none  &none  &kp RS(RA(RC(RG(K))))  &none                  &none  &none
+&none  &kp RC(RA(RS(RG(Z))))  &none                  &kp RS(RA(RC(RG(C))))  &kp RS(RA(RC(RG(V))))  &none                                                &none      &none                                &none  &none  &none                  &none                  &none  &none
+&none  &none                  &none                  &none                  &none                                         &none                  &none  &none      &none  &none  &none                         &none  &none                  &none                  &none  &none
             >;
         };
     };
