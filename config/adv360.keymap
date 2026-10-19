@@ -5,6 +5,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
 
+&lt { tapping-term-ms = <400>; };
+
 / {
     behaviors {
         #include "macros.dtsi"
@@ -27,11 +29,11 @@
         default_layer_macOS {
             display-name = "Base";
             bindings = <
-&kp EQUAL  &kp N1     &kp N2            &kp N3     &kp N4  &kp N5  &none                                                                               &mo 3        &kp N6  &kp N7  &kp N8     &kp N9    &kp N0           &kp MINUS
-&kp TAB    &kp Q      &kp W             &kp E      &kp R   &kp T   &kp LG(C)                                                                           &kp LG(X)    &kp Y   &kp U   &kp I      &kp O     &kp P            &kp BSLH
-&kp ESC    &kp A      &kp S             &kp D      &kp F   &kp G   &kp LG(V)  &kp LG(F)  &kp LEFT_CONTROL      &kp LEFT_ALT          &kp LEFT_COMMAND  &kp LG(Z)    &kp H   &kp J   &kp K      &lt 5 L   &lt 0 SEMICOLON  &kp SQT
-&kp LSHFT  &kp Z      &kp X             &kp C      &kp V   &kp B                         &kp LC(C)             &none                                                &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH         &kp MINUS
-&mo 2      &kp GRAVE  &kp LEFT_COMMAND  &kp LCTRL  &none           &kp BSPC   &mo 0      &kp LC(DEL)           &kp LC(LA(LEFT_GUI))  &kp ENTER         &lt 4 SPACE          &none   &none      &kp LBKT  &kp RBKT         &kp LC(LG(Q))
+&kp EQUAL  &kp N1     &kp N2            &kp N3     &kp N4  &kp N5  &none                                                                               &mo 3        &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &none
+&kp TAB    &kp Q      &kp W             &kp E      &kp R   &kp T   &kp LG(C)                                                                           &kp LG(X)    &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
+&kp ESC    &kp A      &kp S             &kp D      &kp F   &kp G   &kp LG(V)  &kp LG(F)  &kp LEFT_CONTROL      &kp LEFT_ALT          &kp LEFT_COMMAND  &kp LG(Z)    &kp H   &kp J   &kp K      &lt 5 L   &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z      &kp X             &kp C      &kp V   &kp B                         &kp LC(C)             &none                                                &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp MINUS
+&mo 2      &kp GRAVE  &kp LEFT_COMMAND  &kp LCTRL  &none           &kp BSPC   &mo 1      &kp LC(DEL)           &kp LC(LA(LEFT_GUI))  &kp ENTER         &lt 4 SPACE          &none   &none      &kp LBKT  &kp RBKT  &kp LC(LG(Q))
             >;
         };
 
@@ -48,7 +50,7 @@
         fn {
             display-name = "Fn";
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog 0                                      &mo 3   &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &none                                       &mo 3   &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
 &trans  &trans  &trans  &trans  &trans  &trans  &none                                       &none   &trans  &trans  &trans  &trans   &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &none   &trans  &trans      &trans  &trans  &none   &trans  &trans  &trans  &trans   &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans   &trans   &trans
