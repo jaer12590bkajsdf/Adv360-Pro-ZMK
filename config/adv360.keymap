@@ -36,14 +36,16 @@
         tmux_previous_window: tmux_previous_window {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(B) &kp P>;
+            bindings = <&kp LC(B)>, <&macro_wait_time 200>, <&kp P>;
+
             label = "TMUX_PREVIOUS_WINDOW";
         };
 
         tmux_next_window: tmux_next_window {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(B) &kp N>;
+            bindings = <&kp LC(B)>, <&macro_wait_time 200>, <&kp N>;
+
             label = "TMUX_NEXT_WINDOW";
         };
     };
