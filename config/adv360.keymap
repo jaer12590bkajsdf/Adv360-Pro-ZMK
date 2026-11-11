@@ -99,7 +99,8 @@
             >;
         };
 
-        SYMBOLS {
+        symbols_layer {
+            display-name = "Symbols";
             bindings = <
 &none           &none      &none      &none              &none             &none          &none                                               &none      &none         &none          &none          &none                 &none                  &none
 &none           &kp EXCL   &kp AT     &kp POUND          &kp DOLLAR        &kp PERCENT    &none                                               &none      &kp CARET     &kp AMPERSAND  &kp STAR       &kp LEFT_BRACE        &kp RIGHT_BRACE        &none
@@ -109,7 +110,8 @@
             >;
         };
 
-        ARROWS {
+        arrows_layer {
+            display-name = "Arrows";
             bindings = <
 &none           &none       &none            &none          &none        &none       &none                                                                &none  &none  &none     &none     &none      &none      &none
 &none           &none       &kp LG(W)        &none          &none        &none       &none                                                                &none  &none  &kp HOME  &kp UP    &kp END    &kp PG_UP  &none
@@ -119,7 +121,8 @@
             >;
         };
 
-        LAUNCHER {
+        launcher_layer {
+            display-name = "Launcher";
             bindings = <
 &none  &kp RS(RA(RC(RG(N1))))  &kp RS(RA(RC(RG(N2))))  &kp RS(RA(RC(RG(N3))))  &kp RS(RA(RC(RG(N4))))  &kp RC(RS(RA(RG(N5))))  &none                              &none  &kp RS(RA(RC(RG(N6))))  &kp RS(RA(RC(RG(N7))))  &kp RS(RA(RC(RG(N8))))  &kp RS(RA(RC(RG(N9))))  &kp RS(RA(RC(RG(N0))))  &none
 &none  &kp RS(RA(RC(RG(Q))))   &kp RS(RG(RA(RC(W))))   &kp RS(RA(RC(RG(E))))   &kp RS(RC(RG(RA(R))))   &kp RS(RC(RA(RG(T))))   &none                              &none  &kp RS(RA(RC(RG(Y))))   &kp RS(RA(RC(RG(U))))   &kp RS(RA(RC(RG(I))))   &kp RS(RA(RC(RG(O))))   &kp RS(RA(RC(RG(P))))   &none
@@ -129,7 +132,8 @@
             >;
         };
 
-        LAUNCHER_PREFILL {
+        launcher_prefill_layer {
+            display-name = "Prefill";
             bindings = <
 &none  &kp RS(RA(RC(LG(N1))))  &kp RS(RA(RC(LG(N2))))  &kp RS(RA(RC(LG(N3))))  &kp RS(RA(RC(RG(N4))))  &kp RC(RS(RA(LG(N5))))  &none                              &none  &kp RS(RA(RC(LG(N6))))  &kp RS(RA(RC(LG(N7))))  &kp RS(RA(RC(LG(N8))))  &kp RS(RA(RC(LG(N9))))  &kp RS(RA(RC(LG(N0))))  &none
 &none  &kp RS(RA(RC(LG(Q))))   &kp RS(RA(RC(LG(W))))   &kp RS(RA(RC(LG(E))))   &kp RS(RC(RA(LG(R))))   &kp RS(RC(RA(LG(T))))   &none                              &none  &kp RS(RA(RC(LG(Y))))   &kp RS(RA(RC(LG(U))))   &kp RS(RA(RC(LG(I))))   &kp RS(RA(RC(LG(O))))   &kp RS(RA(RC(LG(P))))   &none
@@ -139,7 +143,8 @@
             >;
         };
 
-        TMUX {
+        tmux_layer {
+            display-name = "Tmux";
             bindings = <
 &none  &kp LA(N1)  &kp LA(N2)  &kp LA(N3)  &kp LA(N4)  &kp LA(N5)  &none                                      &none  &kp LA(N6)  &kp LA(N7)    &kp LA(N8)    &kp LA(N9)     &kp LA(N0)  &none
 &none  &none       &kp LA(W)   &none       &none       &none       &none                                      &none  &none       &none         &kp LA(UP)    &none          &none       &none
@@ -149,7 +154,8 @@
             >;
         };
 
-        MOUSE {
+        mouse_layer {
+            display-name = "Mouse";
             bindings = <
 &none  &none  &none  &none  &none  &none  &none                                  &none      &none           &none           &none           &none            &none  &none
 &none  &none  &none  &none  &none  &none  &none                                  &none      &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &none  &none
