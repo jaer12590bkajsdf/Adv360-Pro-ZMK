@@ -1,28 +1,14 @@
-// Must come before any include of dt-bindings/zmk/pointing.h
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1000  // Override cursor speed, default: 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // Override scroll speed, default: 10
-
 #include <dt-bindings/zmk/stp.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
-
-// Layers, in keymap order. Ported from the Glove80 config; MOD is the Glove80 magic layer.
-#define BASE 0
-#define MOD 1
-#define SYMBOLS 2
-#define ARROWS 3
-#define LAUNCHER 4
-#define LAUNCHER_PREFILL 5
-#define TMUX 6
-#define MOUSE 7
 
 &lt {
     tapping-term-ms = <200>;
     quick-tap-ms = <175>;
+    require-prior-idle-ms = <150>;
     hold-trigger-on-release;
 };
 
@@ -80,11 +66,32 @@
         default_layer_macOS {
             display-name = "Base";
             bindings = <
-&kp EQUAL       &kp N1     &kp N2     &kp N3     &kp N4     &kp N5  &lt MOD LG(LC(Q))                                                                                                  &mo MOD           &kp N6  &kp N7     &kp N8     &kp N9    &kp N0    &kp LC(LG(Q))
-&kp TAB         &kp Q      &kp W      &kp E      &kp R      &kp T   &kp LG(C)                                                                                                          &kp LG(X)         &kp Y   &kp U      &kp I      &kp O     &kp P     &kp BSLH
-&kp GRAVE       &kp A      &kp S      &kp D      &kp F      &kp G   &kp LG(V)          &lt LAUNCHER LA(LC(LEFT_GUI))  &lt LAUNCHER_PREFILL LC(ESCAPE)  &kp RCTRL     &mt LEFT_GUI TAB  &kp LG(Z)         &kp H   &kp J      &kp K      &kp L     &kp SEMI  &kp SQT
-&kp LEFT_SHIFT  &kp Z      &kp X      &kp C      &kp V      &kp B                                                     &lt MOUSE LC(C)                  &kp LEFT_ALT                                      &kp N   &kp M      &kp COMMA  &kp DOT   &kp FSLH  &kp MINUS
-&lt MOD GLOBE   &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)          &kp BSPC           &mo SYMBOLS                    &kp DELETE                       &mo TMUX      &kp RET           &lt ARROWS SPACE          &kp LG(F)  &none      &kp LBKT  &kp RBKT  &mo MOD
+&kp EQUAL  &kp N1     &kp N2            &kp N3     &kp N4  &kp N5  &lt 3 LG(LC(Q))                                                                           &mo 3        &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp LC(LG(Q))
+&kp TAB    &kp Q      &kp W             &kp E      &kp R   &kp T   &kp LG(C)                                                                                 &kp LG(X)    &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
+&kp ESC    &kp A      &kp S             &kp D      &kp F   &kp G   &kp LG(V)        &kp LG(F)  &kp LEFT_CONTROL      &kp LEFT_ALT          &kp LEFT_COMMAND  &kp LG(Z)    &kp H   &kp J   &kp K      &lt 5 L   &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z      &kp X             &kp C      &kp V   &kp B                               &kp LC(C)             &none                                                &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp MINUS
+&mo 2      &kp GRAVE  &kp LEFT_COMMAND  &kp LCTRL  &none           &kp BSPC         &mo 1      &kp LC(DEL)           &kp LC(LA(LEFT_GUI))  &kp ENTER         &lt 4 SPACE          &none   &none      &kp LBKT  &kp RBKT  &none
+            >;
+        };
+
+        keypad {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &mo 3   &trans  &kp N7  &kp N8  &kp N9   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &kp N4  &kp N5  &kp N6   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &kp N1  &kp N2  &kp N3   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &kp N0  &none   &kp DOT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &none   &trans      &trans  &trans  &trans          &trans  &trans  &trans   &trans  &trans
+            >;
+        };
+
+        fn {
+            display-name = "Fn";
+            bindings = <
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &none                                       &mo 3   &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+&trans  &trans  &trans  &trans  &trans  &trans  &none                                       &none   &trans  &trans  &trans  &trans   &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &none   &trans  &trans      &trans  &trans  &none   &trans  &trans  &trans  &trans   &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans   &trans   &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans   &trans   &trans
             >;
         };
 
@@ -99,69 +106,23 @@
             >;
         };
 
-        symbols_layer {
-            display-name = "Symbols";
+        ARROWS {
             bindings = <
-&none           &none      &none      &none              &none             &none          &none                                               &none      &none         &none          &none          &none                 &none                  &none
-&none           &kp EXCL   &kp AT     &kp POUND          &kp DOLLAR        &kp PERCENT    &none                                               &none      &kp CARET     &kp AMPERSAND  &kp STAR       &kp LEFT_BRACE        &kp RIGHT_BRACE        &none
-&none           &kp GRAVE  &kp SLASH  &kp COLON          &kp MINUS         &kp UNDER      &none          &none  &none       &none  &kp TAB    &none      &kp QUESTION  &kp COMMA      &kp PERIOD     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none
-&kp LEFT_SHIFT  &kp TILDE  &kp PLUS   &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp SEMICOLON                        &none       &none                        &kp PIPE      &kp EQUAL      &kp BACKSLASH  &kp LBKT              &kp RBKT               &none
-&none           &none      &none      &none              &none                            &kp BACKSPACE  &none  &kp DELETE  &none  &kp ENTER  &kp SPACE                &none          &none          &kp LESS_THAN         &kp GREATER_THAN       &none
+&none      &kp N1            &kp N2                 &kp N3         &kp N4             &kp N5      &none                                                                    &none  &kp N6       &kp N7          &kp N8          &kp N9           &kp N0         &none
+&none      &none             &kp LG(W)              &none          &none              &none       &none                                                                    &none  &none        &kp HOME        &kp UP_ARROW    &kp END          &kp PAGE_UP    &none
+&none      &kp LG(NUMBER_1)  &kp LS(LC(TAB))        &kp LG(GRAVE)  &kp LC(TAB)        &kp LG(N9)  &none  &kp LS(LA(LG(LEFT)))  &kp LS(LA(LG(RIGHT)))         &none  &none  &none  &kp LS(DQT)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PAGE_DOWN  &none
+&kp LSHFT  &kp Z             &none                  &kp C          &kp LS(PRCNT)      &kp LC(B)                                &kp LS(LA(LG(UP_ARROW)))      &none                &none        &none           &none           &none            &none          &none
+&none      &none             &tmux_previous_window  &none          &tmux_next_window              &none  &none                 &none                         &none  &none  &none               &none           &none           &kp LBKT         &kp RBKT       &none
             >;
         };
 
-        arrows_layer {
-            display-name = "Arrows";
+        LAUNCHER {
             bindings = <
-&none           &none       &none            &none          &none        &none       &none                                                                &none  &none  &none     &none     &none      &none      &none
-&none           &none       &kp LG(W)        &none          &none        &none       &none                                                                &none  &none  &kp HOME  &kp UP    &kp END    &kp PG_UP  &none
-&none           &kp LG(N1)  &kp LC(LS(TAB))  &kp LG(GRAVE)  &kp LC(TAB)  &kp LG(N9)  &none  &kp LS(LA(LG(LEFT)))  &kp LS(LA(LG(RIGHT)))     &none  &none  &none  &none  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN  &none
-&kp LEFT_SHIFT  &none       &none            &none          &none        &none                                    &kp LS(LA(LG(UP_ARROW)))  &none                &none  &none     &none     &none      &none      &none
-&none           &none       &none            &none          &none                    &none  &none                 &kp LS(LA(LG(DOWN)))      &none  &none  &none         &none     &none     &none      &none      &none
-            >;
-        };
-
-        launcher_layer {
-            display-name = "Launcher";
-            bindings = <
-&none  &kp RS(RA(RC(RG(N1))))  &kp RS(RA(RC(RG(N2))))  &kp RS(RA(RC(RG(N3))))  &kp RS(RA(RC(RG(N4))))  &kp RC(RS(RA(RG(N5))))  &none                              &none  &kp RS(RA(RC(RG(N6))))  &kp RS(RA(RC(RG(N7))))  &kp RS(RA(RC(RG(N8))))  &kp RS(RA(RC(RG(N9))))  &kp RS(RA(RC(RG(N0))))  &none
-&none  &kp RS(RA(RC(RG(Q))))   &kp RS(RG(RA(RC(W))))   &kp RS(RA(RC(RG(E))))   &kp RS(RC(RG(RA(R))))   &kp RS(RC(RA(RG(T))))   &none                              &none  &kp RS(RA(RC(RG(Y))))   &kp RS(RA(RC(RG(U))))   &kp RS(RA(RC(RG(I))))   &kp RS(RA(RC(RG(O))))   &kp RS(RA(RC(RG(P))))   &none
-&none  &kp RS(RA(RC(RG(A))))   &kp RS(RA(RC(RG(S))))   &kp RS(RA(RC(RG(D))))   &kp RS(RA(RC(RG(F))))   &kp RS(RA(RC(RG(G))))   &none  &none  &none  &none  &none  &none  &kp RS(RA(RC(RG(H))))   &kp RS(RA(RC(RG(J))))   &kp RA(RS(RC(RG(K))))   &kp RS(RC(RG(RA(L))))   &none                   &none
-&none  &kp RS(RA(RC(RG(Z))))   &kp RS(RA(RC(RG(X))))   &kp RS(RA(RC(RG(C))))   &kp RS(RA(RC(RG(V))))   &kp RS(RA(RC(RG(B))))                 &none  &none                &kp RS(RA(RC(RG(N))))   &kp RS(RA(RC(RG(M))))   &none                   &none                   &none                   &none
-&none  &none                   &none                   &none                   &none                                           &none  &none  &none  &none  &none  &none                          &none                   &none                   &none                   &none                   &none
-            >;
-        };
-
-        launcher_prefill_layer {
-            display-name = "Prefill";
-            bindings = <
-&none  &kp RS(RA(RC(LG(N1))))  &kp RS(RA(RC(LG(N2))))  &kp RS(RA(RC(LG(N3))))  &kp RS(RA(RC(RG(N4))))  &kp RC(RS(RA(LG(N5))))  &none                              &none  &kp RS(RA(RC(LG(N6))))  &kp RS(RA(RC(LG(N7))))  &kp RS(RA(RC(LG(N8))))  &kp RS(RA(RC(LG(N9))))  &kp RS(RA(RC(LG(N0))))  &none
-&none  &kp RS(RA(RC(LG(Q))))   &kp RS(RA(RC(LG(W))))   &kp RS(RA(RC(LG(E))))   &kp RS(RC(RA(LG(R))))   &kp RS(RC(RA(LG(T))))   &none                              &none  &kp RS(RA(RC(LG(Y))))   &kp RS(RA(RC(LG(U))))   &kp RS(RA(RC(LG(I))))   &kp RS(RA(RC(LG(O))))   &kp RS(RA(RC(LG(P))))   &none
-&none  &kp RS(RA(RC(LG(A))))   &kp RS(RA(RC(LG(S))))   &kp RS(RA(RC(LG(D))))   &kp RS(RA(RC(LG(F))))   &kp RS(RA(RC(LG(G))))   &none  &none  &none  &none  &none  &none  &kp RS(RA(RC(LG(H))))   &kp RS(RA(RC(LG(J))))   &kp RA(RS(RC(LG(K))))   &kp RS(RC(RA(LG(L))))   &none                   &none
-&none  &kp RS(RA(RC(LG(Z))))   &kp RS(RA(RC(LG(X))))   &kp RS(RA(RC(LG(C))))   &kp RS(RA(RC(LG(V))))   &kp RS(RA(RC(LG(B))))                 &none  &none                &kp RS(RA(RC(LG(N))))   &kp RS(RA(RC(LG(M))))   &none                   &none                   &none                   &none
-&none  &none                   &none                   &none                   &none                                           &none  &none  &none  &none  &none  &none                          &none                   &none                   &none                   &none                   &none
-            >;
-        };
-
-        tmux_layer {
-            display-name = "Tmux";
-            bindings = <
-&none  &kp LA(N1)  &kp LA(N2)  &kp LA(N3)  &kp LA(N4)  &kp LA(N5)  &none                                      &none  &kp LA(N6)  &kp LA(N7)    &kp LA(N8)    &kp LA(N9)     &kp LA(N0)  &none
-&none  &none       &kp LA(W)   &none       &none       &none       &none                                      &none  &none       &none         &kp LA(UP)    &none          &none       &none
-&none  &none       &kp LA(P)   &none       &kp LA(N)   &none       &none      &kp LA(D)  &none  &none  &none  &none  &kp LA(H)   &kp LA(LEFT)  &kp LA(DOWN)  &kp LA(RIGHT)  &none       &none
-&none  &none       &none       &kp LA(C)   &kp LA(V)   &none                             &none  &none                &none       &none         &none         &none          &none       &none
-&none  &none       &none       &none       &none                   &kp LA(Z)  &none      &none  &none  &none  &none              &none         &none         &none          &none       &none
-            >;
-        };
-
-        mouse_layer {
-            display-name = "Mouse";
-            bindings = <
-&none  &none  &none  &none  &none  &none  &none                                  &none      &none           &none           &none           &none            &none  &none
-&none  &none  &none  &none  &none  &none  &none                                  &none      &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &none  &none
-&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none      &none      &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none  &none
-&none  &none  &none  &none  &none  &none                &none  &none                        &none           &none           &none           &none            &none  &none
-&none  &none  &none  &none  &none         &none  &none  &none  &none  &mkp RCLK  &mkp LCLK                  &none           &none           &none            &none  &none
+&none  &none                  &none                  &none                  &none                  &none                  &kp RS(RA(RC(RG(H))))                                  &none                  &none  &none  &none                  &none                  &none  &none
+&none  &none                  &none                  &none                  &none                  &kp RS(RA(RC(RG(T))))  &kp C_VOLUME_UP                                        &kp RS(RA(RC(RG(U))))  &none  &none  &none                  &kp RS(RA(RC(RG(O))))  &none  &none
+&none  &kp RS(RA(RC(RG(A))))  &kp RA(RC(RS(RG(S))))  &none                  &kp RS(RA(RC(RG(F))))  &kp RS(RG(RA(RC(G))))  &kp C_VOLUME_DOWN      &none  &none      &none  &none  &kp RS(RA(RC(RG(M))))  &none  &none  &kp RS(RA(RC(RG(K))))  &none                  &none  &none
+&none  &kp RC(RA(RS(RG(Z))))  &none                  &kp RS(RA(RC(RG(C))))  &kp RS(RA(RC(RG(V))))  &none                                                &none      &none                                &none  &none  &none                  &none                  &none  &none
+&none  &none                  &none                  &none                  &none                                         &none                  &none  &none      &none  &none  &none                         &none  &none                  &none                  &none  &none
             >;
         };
     };
