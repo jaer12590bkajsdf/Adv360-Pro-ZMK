@@ -108,11 +108,11 @@
 
         LAUNCHER {
             bindings = <
-&none  &none                  &none                  &none                  &none                  &none                  &kp RS(RA(RC(RG(H))))                                  &none                  &none  &none  &none                  &none                  &none  &none
-&none  &none                  &none                  &none                  &none                  &kp RS(RA(RC(RG(T))))  &kp C_VOLUME_UP                                        &kp RS(RA(RC(RG(U))))  &none  &none  &none                  &kp RS(RA(RC(RG(O))))  &none  &none
-&none  &kp RS(RA(RC(RG(A))))  &kp RA(RC(RS(RG(S))))  &none                  &kp RS(RA(RC(RG(F))))  &kp RS(RG(RA(RC(G))))  &kp C_VOLUME_DOWN      &none  &none      &none  &none  &kp RS(RA(RC(RG(M))))  &none  &none  &kp RS(RA(RC(RG(K))))  &none                  &none  &none
-&none  &kp RC(RA(RS(RG(Z))))  &none                  &kp RS(RA(RC(RG(C))))  &kp RS(RA(RC(RG(V))))  &none                                                &none      &none                                &none  &none  &none                  &none                  &none  &none
-&none  &none                  &none                  &none                  &none                                         &none                  &none  &none      &none  &none  &none                         &none  &none                  &none                  &none  &none
+&none  &kp RS(RA(RC(RG(N1))))  &kp RS(RA(RC(RG(N2))))  &kp RS(RA(RC(RG(N3))))  &kp RS(RA(RC(RG(N4))))  &kp RS(RA(RC(RG(N5))))  &none                                  &none  &kp RS(RA(RC(RG(N6))))  &kp RS(RA(RC(RG(N7))))  &kp RS(RA(RC(RG(N8))))  &kp RS(RA(RC(RG(N9))))  &kp RS(RA(RC(RG(N0))))  &none
+&none  &kp RS(RC(RG(RA(Q))))   &kp RS(RA(RC(RG(W))))   &kp RS(RA(RC(RG(E))))   &kp RS(RA(RC(RG(R))))   &kp RS(RA(RC(RG(T))))   &none                                  &none  &kp RS(RA(RC(RG(Y))))   &kp RS(RA(RC(RG(U))))   &kp RS(RA(RC(RG(I))))   &kp RS(RC(RA(RG(O))))   &kp RS(RC(RA(RG(P))))   &none
+&none  &kp RS(RA(RC(RG(A))))   &kp RA(RC(RS(RG(S))))   &kp RS(RA(RC(RG(D))))   &kp RS(RA(RC(RG(F))))   &kp RS(RG(RA(RC(G))))   &none  &none  &none      &none  &none  &none  &kp RS(RA(RC(RG(H))))   &kp RS(RA(RC(RG(J))))   &kp RS(RA(RC(RG(K))))   &kp RS(RA(RC(RG(L))))   &none                   &none
+&none  &kp RC(RA(RS(RG(Z))))   &kp RS(RA(RC(RG(X))))   &kp RS(RA(RC(RG(C))))   &kp RS(RA(RC(RG(V))))   &kp RS(RA(RC(RG(B))))                 &none      &none                &kp RS(RA(RC(RG(N))))   &kp RS(RA(RC(RG(M))))   &none                   &none                   &none                   &none
+&none  &none                   &none                   &none                   &none                                           &none  &none  &none      &none  &none  &none                          &none                   &none                   &none                   &none                   &none
             >;
         };
     };
