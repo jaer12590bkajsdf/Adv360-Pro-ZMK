@@ -125,5 +125,15 @@
 &none  &none                   &none                   &none                   &none                                           &none  &none  &none      &none  &none  &none                          &none                   &none                   &none                   &none                   &none
             >;
         };
+
+        TMUX {
+            bindings = <
+&none   &kp LA(N1)  &kp LA(N2)  &kp LA(N3)  &kp LA(N4)  &kp LA(N5)  &trans                                            &trans     &kp LA(N6)  &kp LA(N7)    &kp LA(N8)    &kp LA(N9)     &kp LA(N0)  &trans
+&trans  &trans      &kp LA(W)   &trans      &trans      &trans      &trans                                            &trans     &trans      &trans        &kp LA(UP)    &trans         &trans      &trans
+&trans  &trans      &kp LA(P)   &trans      &kp LA(N)   &trans      &trans     &trans     &trans      &trans  &trans  &kp LA(H)  &trans      &kp LA(LEFT)  &kp LA(DOWN)  &kp LA(RIGHT)  &trans      &trans
+&trans  &trans      &trans      &kp RA(C)   &kp LA(V)   &trans                            &trans      &trans                     &trans      &trans        &trans        &trans         &trans      &trans
+&trans  &trans      &trans      &trans      &trans                  &kp LA(Z)  &kp LA(D)  &trans      &trans  &trans  &trans                 &trans        &trans        &trans         &trans      &trans
+            >;
+        };
     };
 };
