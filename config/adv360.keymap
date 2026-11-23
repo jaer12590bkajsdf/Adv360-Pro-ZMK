@@ -115,5 +115,15 @@
 &none  &none                   &none                   &none                   &none                                           &none  &none  &none      &none  &none  &none                          &none                   &none                   &none                   &none                   &none
             >;
         };
+
+        LAUNCHER_PREFILL {
+            bindings = <
+&none  &kp RS(RA(RC(LG(N1))))  &kp RS(RA(RC(LG(N2))))  &kp RS(RA(RC(LG(N3))))  &kp RS(RA(RC(LG(N4))))  &kp RS(RA(RC(LG(N5))))  &none                                  &none  &kp RS(RA(RC(LG(N6))))  &kp RS(RA(RC(LG(N7))))  &kp RS(RA(RC(LG(N8))))  &kp RS(RA(RC(LG(N9))))  &kp RS(RA(RC(LG(N0))))  &none
+&none  &kp RS(RC(RA(LG(Q))))   &kp RS(RA(RC(LG(W))))   &kp RS(RA(RC(LG(E))))   &kp RS(RA(RC(LG(R))))   &kp RS(RA(RC(LG(T))))   &none                                  &none  &kp RS(RA(RC(LG(Y))))   &kp RS(RA(RC(LG(U))))   &kp RS(RA(RC(LG(I))))   &kp RS(RC(RA(LG(O))))   &kp RS(RC(RA(LG(P))))   &none
+&none  &kp RS(RA(RC(LG(A))))   &kp RA(RC(RS(LG(S))))   &kp RS(RA(RC(LG(D))))   &kp RS(RA(RC(LG(F))))   &kp RS(RA(RC(LG(G))))   &none  &none  &none      &none  &none  &none  &kp RS(RA(RC(LG(H))))   &kp RS(RA(RC(LG(J))))   &kp RS(RA(RC(LG(K))))   &kp RS(RA(RC(LG(L))))   &none                   &none
+&none  &kp RC(RA(RS(LG(Z))))   &kp RS(RA(RC(LG(X))))   &kp RS(RA(RC(LG(C))))   &kp RS(RA(RC(LG(V))))   &kp RS(RA(RC(LG(B))))                 &none      &none                &kp RS(RA(RC(LG(N))))   &kp RS(RA(RC(LG(M))))   &none                   &none                   &none                   &none
+&none  &none                   &none                   &none                   &none                                           &none  &none  &none      &none  &none  &none                          &none                   &none                   &none                   &none                   &none
+            >;
+        };
     };
 };
