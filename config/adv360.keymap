@@ -64,11 +64,11 @@
         DEFAULT_MACOS {
             display-name = "Base";
             bindings = <
-&kp EQUAL          &kp N1     &kp N2     &kp N3     &kp N4     &kp N5  &mo 2                                                                                         &mo 2        &kp N6  &kp N7     &kp N8     &kp N9    &kp N0    &kp LC(LG(Q))
-&none              &kp Q      &kp W      &kp E      &kp R      &kp T   &none                                                                                         &none        &kp Y   &kp U      &kp I      &kp O     &kp P     &kp BSLH
-&none              &kp A      &kp S      &kp D      &kp F      &kp G   &none     &lt (7) LA(LC(LEFT_GUI))  &lt 8 ESCAPE      &kp LEFT_ALT      &mt LEFT_COMMAND TAB  &none        &kp H   &kp J      &kp K      &kp L     &kp SEMI  &kp SQT
-&kp LSHFT          &kp Z      &kp X      &kp C      &kp V      &kp B                                       &kp LC(C)         &kp LEFT_CONTROL                                     &kp N   &kp M      &kp COMMA  &kp DOT   &kp FSLH  &kp MINUS
-&lt (4) LC(SPACE)  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)          &kp BSPC  &mo 3                     &kp DEL           &mo 9             &kp ENTER             &lt 5 SPACE          &kp LG(F)  &none      &kp LBKT  &kp RBKT  &none
+&none              &kp N1     &kp N2     &kp N3     &kp N4     &kp N5  &mo 2                                                                                         &mo 2        &kp N6  &kp N7     &kp N8  &kp N9  &kp N0  &kp LC(LG(Q))
+&none              &kp Q      &kp W      &kp E      &kp R      &kp T   &none                                                                                         &none        &kp Y   &kp U      &kp I   &kp O   &kp P   &kp DEL
+&none              &kp A      &kp S      &kp D      &kp F      &kp G   &none     &lt (8) LA(LC(LEFT_GUI))  &lt 9 ESCAPE      &kp LEFT_ALT      &mt LEFT_COMMAND TAB  &none        &kp H   &kp J      &kp K   &kp L   &none   &none
+&kp LSHFT          &kp Z      &kp X      &kp C      &kp V      &kp B                                       &kp LC(C)         &kp LEFT_CONTROL                                     &kp N   &kp M      &none   &none   &none   &none
+&lt (5) LC(SPACE)  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)          &kp BSPC  &mo 4                     &mo 3             &mo 10            &kp ENTER             &lt 6 SPACE          &kp LG(F)  &none   &none   &none   &none
             >;
         };
 
@@ -78,7 +78,7 @@
 &trans                  &trans     &trans     &trans     &trans     &trans  &trans                                                          &trans       &trans  &trans     &trans  &trans  &trans  &trans
 &trans                  &trans     &trans     &trans     &trans     &trans  &trans  &trans  &trans      &trans        &mt LEFT_CONTROL TAB  &trans       &trans  &trans     &trans  &trans  &trans  &trans
 &trans                  &trans     &trans     &trans     &trans     &trans                  &trans      &kp LEFT_GUI                                     &trans  &trans     &trans  &trans  &trans  &trans
-&lt (4) LA(LEFT_SHIFT)  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)          &trans  &trans  &trans      &trans        &trans                &lt 6 SPACE          &kp LC(F)  &trans  &trans  &trans  &trans
+&lt (5) LA(LEFT_SHIFT)  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)          &trans  &trans  &trans      &trans        &trans                &lt 7 SPACE          &kp LC(F)  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -90,6 +90,16 @@
 &studio_unlock  &none         &none         &none         &none         &none         &none        &none  &none      &bt BT_CLR  &none       &stp STP_BAT     &none  &none       &none       &none  &none  &none
 &none           &none         &none         &none         &macro_ver    &none                             &none      &none                                    &none  &none       &none       &none  &none  &none
 &none           &none         &none         &none         &none                       &none        &none  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG         &bl BL_INC  &bl BL_DEC  &none  &none  &none
+            >;
+        };
+
+        NUMBERS {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &trans  &trans  &trans      &trans  &trans  &trans  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
