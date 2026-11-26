@@ -95,21 +95,21 @@
 
         NUMBERS {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &trans  &trans  &trans      &trans  &trans  &trans  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&none           &none   &none   &none   &none   &none   &none                                       &none      &none   &none   &none   &none   &none   &none
+&none           &none   &none   &none   &none   &none   &none                                       &none      &none   &none   &none   &none   &none   &kp DEL
+&none           &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &none     &none  &none      &none  &kp TAB  &none      &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &none
+&kp LEFT_SHIFT  &none   &none   &none   &none   &none                    &none      &none                      &none   &none   &none   &none   &none   &none
+&none           &none   &none   &none   &none           &kp BSPC  &none  &none      &none  &kp RET  &kp SPACE          &none   &none   &none   &none   &none
             >;
         };
 
         SYMBOLS {
             bindings = <
-&trans     &trans         &trans        &trans         &trans        &trans         &trans                                               &trans     &trans         &trans        &trans        &trans        &trans        &trans
-&trans     &kp LS(EXCL)   &kp LS(AT)    &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)  &trans                                               &trans     &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp LS(LBRC)  &kp LS(RBRC)  &trans
-&trans     &kp GRAVE      &kp FSLH      &kp LS(COLON)  &kp MINUS     &kp LS(UNDER)  &trans    &trans  &trans          &trans  &kp TAB    &trans     &kp LS(QMARK)  &kp COMMA     &kp DOT       &kp LS(LPAR)  &kp LS(RPAR)  &trans
-&kp LSHFT  &kp LS(TILDE)  &kp LS(PLUS)  &kp LS(DQT)    &kp SQT       &kp SEMI                         &trans          &trans                        &kp LS(PIPE)   &kp EQUAL     &kp BSLH      &kp LBKT      &kp RBKT      &trans
-&trans     &trans         &trans        &trans         &trans                       &kp BSPC  &trans  &kp DELETE      &trans  &kp ENTER  &kp SPACE                 &trans        &trans        &kp LS(LT)    &kp LS(GT)    &trans
+&none      &none          &none         &none          &none         &none          &none                                         &none      &none          &none         &none         &none         &none         &none
+&none      &kp LS(EXCL)   &kp LS(AT)    &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)  &none                                         &none      &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp LS(LBRC)  &kp LS(RBRC)  &kp DELETE
+&none      &kp GRAVE      &kp FSLH      &kp LS(COLON)  &kp MINUS     &kp LS(UNDER)  &none     &none  &none      &none  &kp TAB    &none      &kp LS(QMARK)  &kp COMMA     &kp DOT       &kp LS(LPAR)  &kp LS(RPAR)  &none
+&kp LSHFT  &kp LS(TILDE)  &kp LS(PLUS)  &kp LS(DQT)    &kp SQT       &kp SEMI                        &none      &none                        &kp LS(PIPE)   &kp EQUAL     &kp BSLH      &kp LBKT      &kp RBKT      &none
+&none      &none          &none         &none          &none                        &kp BSPC  &none  &none      &none  &kp ENTER  &kp SPACE                 &none         &none         &kp LS(LT)    &kp LS(GT)    &none
             >;
         };
 
